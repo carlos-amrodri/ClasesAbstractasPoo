@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace cuentasBancarias
 {
+    //Esta es la implementaci{on que agrega funcionalidades
     public class cajaGold : ICuenta
     {
        
@@ -38,6 +39,7 @@ namespace cuentasBancarias
             }
         }
 
+        //Metodos adicionales de la cuenta gold
         public string depositoDolar(int valor)
         {
             this.saldoDolar = +valor;
@@ -50,6 +52,7 @@ namespace cuentasBancarias
             return head + total.ToString("N3");
         }
 
+        //En el caso de querer obtener o actualizar datos de la cuenta
         public override Cuenta getCuenta()
         {
             return this.cuenta;

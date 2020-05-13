@@ -22,14 +22,16 @@ namespace cuentasBancarias
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Creo lo modelos 
             Cuenta c1 = new Cuenta(123, "Juan", 12);
             Cuenta c2 = new Cuenta(456, "pedro", 45);
-
+            //Creo las implementaciones y le paso las cuentas modelos
             ICuenta cajaAh = new cajaAhorro(c1);
-            listadoCuentas.Add(cajaAh);
+            listadoCuentas.Add(cajaAh);//Lo agrego a la lista de cuentas
             cajaGold gold = new cajaGold(c2);
             listadoCuentas.Add(gold);
 
+            
             mostrar = cajaAh.deposito(1200);
             MessageBox.Show(mostrar);
             mostrar = cajaAh.retiro(1500);

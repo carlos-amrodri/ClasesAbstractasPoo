@@ -8,6 +8,7 @@ namespace cuentasBancarias
 {
     public class Cuenta
     {
+        //Esta es la cuenta base que solo tiene propiedades
         public Cuenta (int numCuent, string nombre, int id)
         {
             this.numeroCuenta = numCuent;
